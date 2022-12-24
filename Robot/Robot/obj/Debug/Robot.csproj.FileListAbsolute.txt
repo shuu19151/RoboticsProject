@@ -1,0 +1,32 @@
+C:\Users\lamqu\source\repos\Robot\Robot\bin\Debug\Robot.exe.config
+C:\Users\lamqu\source\repos\Robot\Robot\bin\Debug\Robot.exe
+C:\Users\lamqu\source\repos\Robot\Robot\bin\Debug\Robot.pdb
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.csproj.AssemblyReference.cache
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.csproj.SuggestedBindingRedirects.cache
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.Form1.resources
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.Form2.resources
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.Properties.Resources.resources
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.csproj.GenerateResource.cache
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.csproj.CoreCompileInputs.cache
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.exe
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.pdb
+C:\Users\lamqu\source\repos\Robot\Robot\bin\Debug\Robot.exe.manifest
+C:\Users\lamqu\source\repos\Robot\Robot\bin\Debug\Robot.application
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.exe.manifest
+C:\Users\lamqu\source\repos\Robot\Robot\obj\Debug\Robot.application
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\bin\Debug\Robot.exe.config
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\bin\Debug\Robot.exe.manifest
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\bin\Debug\Robot.application
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\bin\Debug\Robot.exe
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\bin\Debug\Robot.pdb
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.csproj.AssemblyReference.cache
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.csproj.SuggestedBindingRedirects.cache
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.Form1.resources
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.Form2.resources
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.Properties.Resources.resources
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.csproj.GenerateResource.cache
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.csproj.CoreCompileInputs.cache
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.exe.manifest
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.application
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.exe
+C:\Tri\HK 1 nam 4\TT Robotics\docs\CODE\Robot\Robot\obj\Debug\Robot.pdb
