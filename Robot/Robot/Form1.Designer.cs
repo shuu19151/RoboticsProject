@@ -95,8 +95,8 @@
             this.ServoText = new System.Windows.Forms.TextBox();
             this.ServoBtn = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.trackBarServo = new System.Windows.Forms.TrackBar();
             this.SvSlideText = new System.Windows.Forms.Label();
+            this.trackBarServo = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTheta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTheta3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -791,6 +791,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Gripper control";
             // 
+            // SvSlideText
+            // 
+            this.SvSlideText.AutoSize = true;
+            this.SvSlideText.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SvSlideText.Location = new System.Drawing.Point(258, 49);
+            this.SvSlideText.Name = "SvSlideText";
+            this.SvSlideText.Size = new System.Drawing.Size(23, 26);
+            this.SvSlideText.TabIndex = 14;
+            this.SvSlideText.Text = "0";
+            // 
             // trackBarServo
             // 
             this.trackBarServo.BackColor = System.Drawing.Color.DarkSalmon;
@@ -801,16 +811,6 @@
             this.trackBarServo.TabIndex = 13;
             this.trackBarServo.TickFrequency = 5;
             this.trackBarServo.Scroll += new System.EventHandler(this.trackBarServo_Scroll);
-            // 
-            // SvSlideText
-            // 
-            this.SvSlideText.AutoSize = true;
-            this.SvSlideText.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SvSlideText.Location = new System.Drawing.Point(258, 49);
-            this.SvSlideText.Name = "SvSlideText";
-            this.SvSlideText.Size = new System.Drawing.Size(23, 26);
-            this.SvSlideText.TabIndex = 14;
-            this.SvSlideText.Text = "0";
             // 
             // Form1
             // 
