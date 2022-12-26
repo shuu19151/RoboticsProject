@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO.Ports;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Robot
@@ -20,6 +21,7 @@ namespace Robot
             {
                 groupBox1.Enabled = false;
                 groupBox4.Enabled = false;
+                groupBox6.Enabled = false;
             }
 
             string[] ports = SerialPort.GetPortNames();
@@ -76,9 +78,9 @@ namespace Robot
             py = (L2 * Math.Cos(theta2 * conv) + L3 * Math.Cos(theta3 * conv + theta2 * conv) + d2) * Math.Sin(theta1 * conv);
             pz = dd + L2 * Math.Sin(theta2 * conv) + L3 * Math.Sin(theta3 * conv + theta2 * conv);
 
-/*            px = Math.Round(px, 3);
-            py = Math.Round(py, 3);
-            pz = Math.Round(pz, 3);*/
+            px = Math.Round(px, 12);
+            py = Math.Round(py, 12);
+            pz = Math.Round(pz, 12);
 
             PosFKpx.Text = px.ToString();
             PosFKpy.Text = py.ToString();
@@ -102,9 +104,9 @@ namespace Robot
                     py = (L2 * Math.Cos(theta2 * conv) + L3 * Math.Cos(theta3 * conv + theta2 * conv) + d2) * Math.Sin(theta1 * conv);
                     pz = dd + L2 * Math.Sin(theta2 * conv) + L3 * Math.Sin(theta3 * conv + theta2 * conv);
 
-/*                    px = Math.Round(px, 3);
-                    py = Math.Round(py, 3);
-                    pz = Math.Round(pz, 3);*/
+                    px = Math.Round(px, 12);
+                    py = Math.Round(py, 12);
+                    pz = Math.Round(pz, 12);
 
                     PosFKpx.Text = px.ToString();
                     PosFKpy.Text = py.ToString();
@@ -183,8 +185,11 @@ namespace Robot
             AngIKtheta2.Text = Sol1theta2.Text;
             AngIKtheta3.Text = Sol1theta3.Text;
 
-            string data = "a" + AngIKtheta1.Text + "b" + AngIKtheta2.Text + "c" + AngIKtheta2.Text;
-            SerCOM.Write(data);
+            if (SerCOM.IsOpen)
+            {
+                string data = "a" + Sol1theta1.Text + "b" + Sol1theta2.Text + "c" + Sol1theta3.Text;
+                SerCOM.Write(data);
+            }
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -199,14 +204,38 @@ namespace Robot
             this.Hide();
         }
 
+        private void ServoBtn_Click(object sender, EventArgs e)
+        {
+            if (SerCOM.IsOpen)
+            {
+                trackBarServo.Value = Convert.ToInt32(ServoText.Text);
+                SvSlideText.Text = ServoText.Text;
+                string data = "d" + ServoText.Text;
+                SerCOM.Write(data);
+            }
+        }
+
+        private void trackBarServo_Scroll(object sender, EventArgs e)
+        {
+            if (SerCOM.IsOpen)
+            {
+                SvSlideText.Text = Convert.ToString(trackBarServo.Value);
+                String data = "d" + SvSlideText.Text;
+                SerCOM.Write(data);
+            }
+        }
+
         private void SendSecondSol_Click(object sender, EventArgs e)
         {
             AngIKtheta1.Text = Sol2theta1.Text;
             AngIKtheta2.Text = Sol2theta2.Text;
             AngIKtheta3.Text = Sol2theta3.Text;
 
-            string data = "a" + AngIKtheta1.Text + "b" + AngIKtheta2.Text + "c" + AngIKtheta2.Text;
-            SerCOM.Write(data);
+            if (SerCOM.IsOpen)
+            {
+                string data = "a" + Sol2theta1.Text + "b" + Sol2theta2.Text + "c" + Sol2theta3.Text;
+                SerCOM.Write(data);
+            }
         }
         //Inverse kinematics button
         private void SendInverse_Click(object sender, EventArgs e)
@@ -316,11 +345,12 @@ namespace Robot
                         PortBox.Enabled = false;
                         groupBox1.Enabled = true;
                         groupBox4.Enabled = true;
+                        groupBox6.Enabled = true;
                         ConnectArduino.Text = "Disconnect";
                         i = true;
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("COM Port is not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

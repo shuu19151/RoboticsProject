@@ -92,6 +92,11 @@
             this.IKPx = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.IntroBtn = new System.Windows.Forms.Button();
+            this.ServoText = new System.Windows.Forms.TextBox();
+            this.ServoBtn = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.trackBarServo = new System.Windows.Forms.TrackBar();
+            this.SvSlideText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTheta2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarTheta3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -103,6 +108,8 @@
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarServo)).BeginInit();
             this.SuspendLayout();
             // 
             // ConnectArduino
@@ -127,8 +134,8 @@
             // trackBarTheta2
             // 
             this.trackBarTheta2.Location = new System.Drawing.Point(82, 81);
-            this.trackBarTheta2.Maximum = 360;
-            this.trackBarTheta2.Minimum = -360;
+            this.trackBarTheta2.Maximum = 90;
+            this.trackBarTheta2.Minimum = -45;
             this.trackBarTheta2.Name = "trackBarTheta2";
             this.trackBarTheta2.Size = new System.Drawing.Size(261, 45);
             this.trackBarTheta2.TabIndex = 4;
@@ -138,8 +145,8 @@
             // trackBarTheta3
             // 
             this.trackBarTheta3.Location = new System.Drawing.Point(82, 132);
-            this.trackBarTheta3.Maximum = 360;
-            this.trackBarTheta3.Minimum = -360;
+            this.trackBarTheta3.Maximum = 90;
+            this.trackBarTheta3.Minimum = -90;
             this.trackBarTheta3.Name = "trackBarTheta3";
             this.trackBarTheta3.Size = new System.Drawing.Size(261, 45);
             this.trackBarTheta3.TabIndex = 4;
@@ -374,8 +381,8 @@
             // trackBarTheta1
             // 
             this.trackBarTheta1.Location = new System.Drawing.Point(82, 30);
-            this.trackBarTheta1.Maximum = 360;
-            this.trackBarTheta1.Minimum = -360;
+            this.trackBarTheta1.Maximum = 90;
+            this.trackBarTheta1.Minimum = -90;
             this.trackBarTheta1.Name = "trackBarTheta1";
             this.trackBarTheta1.Size = new System.Drawing.Size(261, 45);
             this.trackBarTheta1.TabIndex = 4;
@@ -434,7 +441,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(551, 71);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(421, 472);
+            this.groupBox4.Size = new System.Drawing.Size(421, 588);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Inverse kinematics";
@@ -442,7 +449,7 @@
             // SendFirstSol
             // 
             this.SendFirstSol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.SendFirstSol.Location = new System.Drawing.Point(25, 428);
+            this.SendFirstSol.Location = new System.Drawing.Point(25, 519);
             this.SendFirstSol.Name = "SendFirstSol";
             this.SendFirstSol.Size = new System.Drawing.Size(170, 34);
             this.SendFirstSol.TabIndex = 18;
@@ -453,7 +460,7 @@
             // SendSecondSol
             // 
             this.SendSecondSol.BackColor = System.Drawing.Color.Yellow;
-            this.SendSecondSol.Location = new System.Drawing.Point(228, 428);
+            this.SendSecondSol.Location = new System.Drawing.Point(229, 522);
             this.SendSecondSol.Name = "SendSecondSol";
             this.SendSecondSol.Size = new System.Drawing.Size(170, 34);
             this.SendSecondSol.TabIndex = 18;
@@ -470,16 +477,16 @@
             this.groupBox8.Controls.Add(this.label22);
             this.groupBox8.Controls.Add(this.Sol2theta1);
             this.groupBox8.Controls.Add(this.label23);
-            this.groupBox8.Location = new System.Drawing.Point(215, 244);
+            this.groupBox8.Location = new System.Drawing.Point(215, 267);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(192, 177);
+            this.groupBox8.Size = new System.Drawing.Size(192, 228);
             this.groupBox8.TabIndex = 16;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Solution2";
             // 
             // Sol2theta3
             // 
-            this.Sol2theta3.Location = new System.Drawing.Point(84, 135);
+            this.Sol2theta3.Location = new System.Drawing.Point(84, 170);
             this.Sol2theta3.Name = "Sol2theta3";
             this.Sol2theta3.Size = new System.Drawing.Size(100, 27);
             this.Sol2theta3.TabIndex = 9;
@@ -488,7 +495,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(9, 135);
+            this.label24.Location = new System.Drawing.Point(9, 170);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(68, 24);
             this.label24.TabIndex = 8;
@@ -496,7 +503,7 @@
             // 
             // Sol2theta2
             // 
-            this.Sol2theta2.Location = new System.Drawing.Point(85, 84);
+            this.Sol2theta2.Location = new System.Drawing.Point(85, 108);
             this.Sol2theta2.Name = "Sol2theta2";
             this.Sol2theta2.Size = new System.Drawing.Size(100, 27);
             this.Sol2theta2.TabIndex = 9;
@@ -505,7 +512,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(9, 84);
+            this.label22.Location = new System.Drawing.Point(9, 108);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(68, 24);
             this.label22.TabIndex = 8;
@@ -513,7 +520,7 @@
             // 
             // Sol2theta1
             // 
-            this.Sol2theta1.Location = new System.Drawing.Point(85, 33);
+            this.Sol2theta1.Location = new System.Drawing.Point(85, 46);
             this.Sol2theta1.Name = "Sol2theta1";
             this.Sol2theta1.Size = new System.Drawing.Size(100, 27);
             this.Sol2theta1.TabIndex = 9;
@@ -522,7 +529,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(9, 33);
+            this.label23.Location = new System.Drawing.Point(9, 46);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(68, 24);
             this.label23.TabIndex = 8;
@@ -537,30 +544,30 @@
             this.groupBox7.Controls.Add(this.label21);
             this.groupBox7.Controls.Add(this.label5);
             this.groupBox7.Controls.Add(this.label20);
-            this.groupBox7.Location = new System.Drawing.Point(11, 244);
+            this.groupBox7.Location = new System.Drawing.Point(11, 267);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(198, 177);
+            this.groupBox7.Size = new System.Drawing.Size(198, 228);
             this.groupBox7.TabIndex = 16;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Solution1";
             // 
             // Sol1theta3
             // 
-            this.Sol1theta3.Location = new System.Drawing.Point(84, 135);
+            this.Sol1theta3.Location = new System.Drawing.Point(84, 170);
             this.Sol1theta3.Name = "Sol1theta3";
             this.Sol1theta3.Size = new System.Drawing.Size(100, 27);
             this.Sol1theta3.TabIndex = 9;
             // 
             // Sol1theta2
             // 
-            this.Sol1theta2.Location = new System.Drawing.Point(85, 84);
+            this.Sol1theta2.Location = new System.Drawing.Point(85, 108);
             this.Sol1theta2.Name = "Sol1theta2";
             this.Sol1theta2.Size = new System.Drawing.Size(100, 27);
             this.Sol1theta2.TabIndex = 9;
             // 
             // Sol1theta1
             // 
-            this.Sol1theta1.Location = new System.Drawing.Point(85, 33);
+            this.Sol1theta1.Location = new System.Drawing.Point(85, 46);
             this.Sol1theta1.Name = "Sol1theta1";
             this.Sol1theta1.Size = new System.Drawing.Size(100, 27);
             this.Sol1theta1.TabIndex = 9;
@@ -569,7 +576,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(10, 135);
+            this.label21.Location = new System.Drawing.Point(10, 170);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(68, 24);
             this.label21.TabIndex = 8;
@@ -579,7 +586,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 33);
+            this.label5.Location = new System.Drawing.Point(10, 46);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 24);
             this.label5.TabIndex = 8;
@@ -589,7 +596,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(10, 84);
+            this.label20.Location = new System.Drawing.Point(10, 108);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(68, 24);
             this.label20.TabIndex = 8;
@@ -752,10 +759,64 @@
             this.IntroBtn.UseVisualStyleBackColor = false;
             this.IntroBtn.Click += new System.EventHandler(this.IntroBtn_Click);
             // 
+            // ServoText
+            // 
+            this.ServoText.Location = new System.Drawing.Point(313, 51);
+            this.ServoText.Name = "ServoText";
+            this.ServoText.Size = new System.Drawing.Size(87, 27);
+            this.ServoText.TabIndex = 11;
+            // 
+            // ServoBtn
+            // 
+            this.ServoBtn.Location = new System.Drawing.Point(416, 49);
+            this.ServoBtn.Name = "ServoBtn";
+            this.ServoBtn.Size = new System.Drawing.Size(96, 29);
+            this.ServoBtn.TabIndex = 12;
+            this.ServoBtn.Text = "Send";
+            this.ServoBtn.UseVisualStyleBackColor = true;
+            this.ServoBtn.Click += new System.EventHandler(this.ServoBtn_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.DarkSalmon;
+            this.groupBox6.Controls.Add(this.SvSlideText);
+            this.groupBox6.Controls.Add(this.trackBarServo);
+            this.groupBox6.Controls.Add(this.ServoBtn);
+            this.groupBox6.Controls.Add(this.ServoText);
+            this.groupBox6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(13, 549);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(532, 110);
+            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Gripper control";
+            // 
+            // trackBarServo
+            // 
+            this.trackBarServo.BackColor = System.Drawing.Color.DarkSalmon;
+            this.trackBarServo.Location = new System.Drawing.Point(30, 48);
+            this.trackBarServo.Maximum = 60;
+            this.trackBarServo.Name = "trackBarServo";
+            this.trackBarServo.Size = new System.Drawing.Size(203, 45);
+            this.trackBarServo.TabIndex = 13;
+            this.trackBarServo.TickFrequency = 5;
+            this.trackBarServo.Scroll += new System.EventHandler(this.trackBarServo_Scroll);
+            // 
+            // SvSlideText
+            // 
+            this.SvSlideText.AutoSize = true;
+            this.SvSlideText.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SvSlideText.Location = new System.Drawing.Point(258, 49);
+            this.SvSlideText.Name = "SvSlideText";
+            this.SvSlideText.Size = new System.Drawing.Size(23, 26);
+            this.SvSlideText.TabIndex = 14;
+            this.SvSlideText.Text = "0";
+            // 
             // Form1
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(984, 556);
+            this.ClientSize = new System.Drawing.Size(983, 671);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.IntroBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox4);
@@ -783,13 +844,16 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarServo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        //private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ConnectArduino;
         private System.Windows.Forms.ComboBox PortBox;
         private System.IO.Ports.SerialPort SerCOM;
@@ -852,6 +916,11 @@
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button IntroBtn;
+        private System.Windows.Forms.TextBox ServoText;
+        private System.Windows.Forms.Button ServoBtn;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label SvSlideText;
+        private System.Windows.Forms.TrackBar trackBarServo;
     }
 }
 

@@ -25,10 +25,15 @@ namespace Robot
                 frm.Show();
                 this.Hide();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Lỗi kết nối");
             }
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);
         }
     }
 }
